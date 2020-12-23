@@ -3,6 +3,7 @@ package com.hendisantika.productservice.controller;
 import com.hendisantika.productservice.entity.Product;
 import com.hendisantika.productservice.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,5 +48,10 @@ public class ProductController {
     @PutMapping
     public Product updateProduct(@RequestBody Product Product) {
         return service.createProduct(Product);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteProduct(@PathVariable Long id) {
+        service.deleteProduct(id);
     }
 }
