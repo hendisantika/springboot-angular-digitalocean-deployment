@@ -33,4 +33,14 @@ export class ProductService {
     const url = this.baseUrl + '/delete/' + id;
     return this.http.delete<Product>(url);
   }
+
+  // Return assigned variable product
+  getter() {
+    return this.product;
+  }
+
+  // Set Value into variable product
+  setter(product: Product) {
+    this.product = product;
+  }
 }
