@@ -26,4 +26,17 @@ export class CreateProductComponent implements OnInit {
     this.route.navigate(['/']);
   }
 
+  public addProduct(): void {
+    if (this.product.id === undefined) {
+      this.productService.addProduct(this.product).subscribe((data) => {
+        this.product = data;
+        alert('Add Product Success');
+      });
+    } else {
+      this.productService.updateProduct(this.product).subscribe((data) => {
+        this.product = data;
+        alert('Update Product Success');
+      });
+    }
+  }
 }
