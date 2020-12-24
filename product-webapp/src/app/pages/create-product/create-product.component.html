@@ -1,1 +1,23 @@
-<p>create-product works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <label>Product Name</label>
+    </div>
+    <div class="col-md-10">
+      <input [(ngModel)]="product.productName" class="form-control" type="text"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <label>Price</label>
+    </div>
+    <div class="col-md-10">
+      <input [(ngModel)]="product.price" class="form-control" type="text"/>
+    </div>
+  </div>
+  <br>
+  <div class="text-right">
+    <button (click)="goToList()" class="btn btn-secondary">Go To Product List</button>
+    <button (click)="addProduct()" class="btn btn-primary">Add Product</button>
+  </div>
+</div>
