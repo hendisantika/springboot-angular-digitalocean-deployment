@@ -22,5 +22,8 @@ export class CreateProductComponent implements OnInit {
     this.product = this.productService.getter();
   }
 
+  public goToList(): void {
+    this.route.navigate(['/']);
+  }
 
 }
