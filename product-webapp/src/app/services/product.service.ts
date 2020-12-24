@@ -18,4 +18,9 @@ export class ProductService {
     const url = this.baseUrl + '/';
     return this.http.get<Product>(url);
   }
+
+  public addProduct(product: Product): Observable<Product> {
+    const url = this.baseUrl + '/';
+    return this.http.post<Product>(url, product);
+  }
 }
