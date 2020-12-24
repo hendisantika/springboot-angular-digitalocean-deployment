@@ -38,4 +38,11 @@ export class IndexComponent implements OnInit, AfterViewInit {
       this.getAllProducts();
     });
   }
+
+  public goToAddProduct(): void {
+    const product: Product = new Product();
+    this.productService.setter(product);
+    this.route.navigate(['/']);
+  }
+
 }
