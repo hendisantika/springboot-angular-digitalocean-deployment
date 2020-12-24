@@ -28,4 +28,9 @@ export class ProductService {
     const url = this.baseUrl + '/';
     return this.http.put<Product>(url, product);
   }
+
+  public deleteProduct(id: number): Observable<Product> {
+    const url = this.baseUrl + '/delete/' + id;
+    return this.http.delete<Product>(url);
+  }
 }
