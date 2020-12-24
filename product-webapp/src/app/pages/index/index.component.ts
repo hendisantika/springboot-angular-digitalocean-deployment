@@ -25,4 +25,10 @@ export class IndexComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.getAllProducts();
   }
+
+  private getAllProducts(): any {
+    this.productService.getAllProduct().subscribe((data) => {
+      this.product = data;
+    });
+  }
 }
