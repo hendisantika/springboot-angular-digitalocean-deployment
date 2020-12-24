@@ -45,4 +45,9 @@ export class IndexComponent implements OnInit, AfterViewInit {
     this.route.navigate(['/']);
   }
 
+  public goToUpdateProduct(product: Product): void {
+    this.productService.setter(product);
+    this.route.navigate(['/add']);
+  }
+
 }
