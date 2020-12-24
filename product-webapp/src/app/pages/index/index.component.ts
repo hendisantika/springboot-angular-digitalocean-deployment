@@ -31,4 +31,11 @@ export class IndexComponent implements OnInit, AfterViewInit {
       this.product = data;
     });
   }
+
+  public deleteProduct(id: number): void {
+    this.productService.deleteProduct(id).subscribe(() => {
+      alert('Delete Product Success');
+      this.getAllProducts();
+    });
+  }
 }
