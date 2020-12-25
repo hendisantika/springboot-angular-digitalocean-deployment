@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   product-service:
-    image: hendisantika/product-service:v2
+    image: hendisantika/product-service:v3
     container_name: product-service
     depends_on:
       - mariadb
